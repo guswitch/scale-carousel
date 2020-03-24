@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+            * {
+                
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #393939;
+            }
+
+
+            #carousel {
+                max-width: 1000px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #carousel .carousel-item {
+                display: none;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0;  transform: scale(0.9); }
+                  to { opacity: 1; transform:  scale(1); }
+            }
+            
+            #carousel .carousel-item img {
+                vertical-align: middle;
+                height: auto;
+                width: 100%;
+            }
+
+            #carousel .carousel-item span {
+               
+                display: grid;
+                padding:2%;
+
+                font-family: 'Open Sans', sans-serif;
+                font-weight: lighter;
+                font-size: 20px;
+                color: #7A9D96;
+                background-color:  #00303F;
+                
+            }
+
+            #carousel a {
+                position: absolute;
+                top: 48%;
+                height: 3rem;
+                width: 3rem;
+                margin-left: 1rem;
+                padding: 0.75rem;
+                text-align: center;
+                cursor: pointer;
+                background-color: #333333;
+                color: #FF5A09;
+                font-size: 1.5rem;
+            }
+
+            #carousel #next {
+                right: 1rem;
+            }
+
+            #carousel #containerDots {
+                position: absolute;
+                top:85%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #carousel #containerDots .dot{
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #333333;
+                display: inline-block;
+            }
+
+            #carousel #containerDots .active{
+                background-color: #FF5A09;
+            }
+
+            /* Media Query */
+
+            @media only screen and (max-width: 600px) {
+                #carousel #containerDots {
+                    top:80%;
+                }
+                #carousel a {
+                    height: 2rem;
+                    width: 2rem;
+                    padding: 0.2rem;
+                }
+              }
